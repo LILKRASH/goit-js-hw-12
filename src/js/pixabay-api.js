@@ -1,4 +1,6 @@
 import { clearGallery, appendImageCard, getItemHeight } from "./render-functions";
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import axios from 'axios';
@@ -14,7 +16,6 @@ const KEY = '42561040-543dc47762d23067e130ec962';
 let QUERY = null;
 inputText.addEventListener("input", event => {
     QUERY = inputText.value;
-    console.log(QUERY);
 });
 
 let current_page = 1;
